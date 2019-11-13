@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pizza Italiana</title>
+	<link rel="shortcut icon" href="./dist/img/logo.png" type="image/png">
+	<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./dist/css/main.css">
+
+	<script src="./dist/js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="./dist/js/main.js"></script>
+</head>
+
+<body id="body" class>
+	<header class="header"></header>
+	<header class="header header_main">
+		<div class="header header_up">
+			<!-- <br> -->
+			<div class="title">Pizza Italiana</div>	
+		</div>
+		<div class="header header_middle">
+			<a class="menu" href="https://www.instagram.com/nancy.hinkul/">menu1</a>
+			<a class="menu" href="https://www.instagram.com/nancy.hinkul/">menu2</a>
+			<a class="menu" href="https://www.instagram.com/nancy.hinkul/">menu3</a>
+
+		</div>
+
+		<div class="header header_down">
+
+			<div class="shopping-cart">
+				<img class="image-cart" src="./dist/img/cart.png">
+				
+				<div class="cart-count">
+					<div class="cart-count-number" id="cart_price">0</div>
+    			</div>
+
+		</div>
+
+		<img class="image-menu" src="./dist/img/menu.png">
+	</div>
+
+
+	</header>
+
+
+
+
+
+	<div class="menu-list">
+      				<header class="menu-list-header">
+        				<h2>MENU</h2>
+       
+      				</header>
+      
+      				<div class=menu-list-body" id='menu-list-body'>
+        				<div class="menu-list-item" id='0'>All Categories</div>
+      				</div>
+
+    			</div>
+
+
+
+
+    			<div class="modal-a">
+        			<div class="modal-content">
+
+            			 <header class="shopping-cart-header">
+            				<span class="close-button"id="close-button">&times;</span>
+            			 	<div class="cart-title">Cart</div>
+      					</header>
+      
+     					 <div class="shopping-cart-body" id="shopping-cart-body"><h1 style="color:#888;font-size: 25px;font-style: italic;">Empty</h1></div>
+
+      					<footer class="shopping-cart-footer">
+
+      						<input class="checkout-info" id="checkout-info-name" type="text" name="Name" value="Name"><br>
+      						<input class="checkout-info" id="checkout-info-phone" type="text" name="Number" value="Phone"><br>
+      						<input class="checkout-info" id="checkout-info-email" type="text" name="Email" value="Email"><br>
+
+      						<!-- <div class="checkout-info"></div> -->
+        					<div href="#0" class="cart-title">
+          						<!-- <em> -->
+          							Checkout - <span class="checkout"id="checkout">0</span>
+           							
+          						<!-- </em> -->
+        					</div>
+      					</footer>
+        			</div>
+				</div>
+
+
+				<div class="modal-a modal-item">
+        			<div class="modal-content modal-content-item"id="modal-item">
+        				 <span class="close-button"id="close-button2">&times;</span>
+
+        				<!-- <img class="image" style="width: 30%;position: inherit;margin-top: 5%;" src="./dist/img/1.jpg"> 
+							<div style="position: inherit; margin-left: 40%;" class="item-description-body">
+							<br>
+							<a class="item_name" style="font-size: 40px;font-weight: bold;" target="_blank">Pizza</a>
+							<br>
+							<div class="category-description" style="margin-left: 10%;">jahsjah</div>
+							<div class="current price">100</div>
+							<br>
+		
+							<button class="button buy" data-name="Pizza1" data-amount="1" data-price="100" data-image="./dist/img/1.jpg" >Add</button>
+						</div> -->
+						
+        			</div>
+        		</div>
+
+
+        		<div class="modal-a modal-success">
+        			<div class="modal-content"id="modal-success"style="width:50%;height: 50%;overflow-y: unset;">
+        				<span class="close-button close-button3"id="close-button3">&times;</span>
+        				<div class="checkout-success">Thank you for your order!</div>
+
+
+
+        				</div>
+        			</div>
+
+
+
+
+	<div class="category"id="category">All Categories</div>
+
+
+	<div class="category hidden">Доставка за номером 0982642772</div>
+
+	<div class="category-body" id="category-body">
+		
+
+	</div>
+	<!-- <div class="row col-11"> -->
+		<!-- <div class="item col-11 col-sm-5 col-md-5 col-lg-2 col-xl-2">
+			<div style="z-index:100;width:500px;overflow: hidden;background: url(https://i2.rozetka.ua/goods/2063802/xiaomi_redmi_note4_332_blk_not_www_images_2063802755.jpg) 100% 100% no-repeat;"></div>
+			<a class="item_name" href="https://www.instagram.com/nancy.hinkul/"target="_blank">Pizza</a>
+			<br>
+				<div class="current price">100</div>
+			<br>
+		
+			<button class="button buy" data-name="Pizza1" data-amount="1" data-price="100" data-image="./dist/img/1.jpg" >Add</button>
+		</div> -->
+
+
+		<!-- <div class="item col-11 col-sm-5 col-md-5 col-lg-2 col-xl-2">
+			<div class="image-container"><img class="image" src="./dist/img/1.jpg"></div>
+			<a class="item_name" href="https://www.instagram.com/nancy.hinkul/"target="_blank">Pizza</a>
+			<br>
+			<div class="old price">200</div
+					><div class="current price">300</div>
+			<br>
+			<button class="button buy" data-name="Pizza2" data-amount="1" data-price="300"data-image="./dist/img/1.jpg">Add</button>
+		</div>
+		<div class="item col-11 col-sm-5 col-md-5 col-lg-2 col-xl-2">
+			<img class="image" src="./dist/img/1.jpg">
+			<a class="item_name" href="https://www.instagram.com/nancy.hinkul/"target="_blank">Pizza</a>
+			<br>
+			<div class="current price">100</div>
+			<br>
+			<button class="button buy" data-name="Pizza3" data-amount="1" data-price="100"data-image="./dist/img/1.jpg">Add</button>
+		</div>
+		<div class="item col-11 col-sm-5 col-md-5 col-lg-2 col-xl-2">
+			<img class="image" src="./dist/img/1.jpg">
+			<a class="item_name" href="https://www.instagram.com/nancy.hinkul/"target="_blank">Pizza</a>
+			<br>
+			<div class="current price">100</div>
+			<br>
+			<button class="button buy" data-name="Pizza4" data-amount="1" data-price="100"data-image="./dist/img/1.jpg">Add</button>
+		</div>
+	</div> -->
+
+	
+
+	
+	<footer class="footer">
+		<div class="footer_text">Author: Anna Hinkul</div>
+	</footer>
+
+
+	
+</body>
+</html>
+
+

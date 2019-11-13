@@ -1,0 +1,27 @@
+$color: #0000ff;
+
+.element {
+	border: 1px solid $color;
+	background: darken(#ffff00, 10%); 
+	height: 200px;
+}
+
+@mixin square($size, $color: #000){
+	width: $size;
+	height: $size;
+	border: 1px solid $color;
+}
+
+.square-100 {
+	@include square(100px);
+}
+
+.square-25 {
+	@include square(25px);
+}
+.square-50 {
+	@include square(50px, #00f);
+}
+.square-75 {
+	@include square(75px, #0f0);
+}
