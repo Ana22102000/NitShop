@@ -1,8 +1,8 @@
-import $ from 'jquery';
-import jQuery from 'jquery';
-window.$ = jQuery;
+// import $ from 'jquery';
+// import jQuery from 'jquery';
+// window.$ = jQuery;
 
-import './scss/basic.scss';
+// import './scss/basic.scss';
 
 //console.log('Hello MIT!');
 
@@ -472,6 +472,7 @@ $(document).on('click','.checkout',function(e){
 	});
 
     $(document).on('click','.image-eye',function(e){
+    
       var description=e.target.parentElement.childNodes[0];
 
 
@@ -499,7 +500,7 @@ $(document).on('click','.checkout',function(e){
  e.target.parentElement.childNodes[0]="";
 
 //console.log(description.length);
-    if(description.length<260+3)
+    if(description.length<=260+3)
         description=json.description;
 
       else{
@@ -511,14 +512,19 @@ $(document).on('click','.checkout',function(e){
       }
 
       if(json.special_price!=null){
-         d.innerHTML+='<img class="image2 image-description" style="width: 30%;position: inherit;" src="'+json.image_url+'"><div style="position: inherit; margin-left: 35%;width:45%;" class="item-description-body"><a class="item_name item_name_description" style="font-weight: bold;" target="_blank">'+json.name+'</a><br><div class="category-description" style="margin-left: 5%;margin-bottom:5%;">'+description+'<img class="image-eye" src="./dist/img/eye.png"></div><div class="old price">'+json.price+'</div><div class="current price">'+json.special_price+'</div><br><button class="button buy" data-name="'+json.name+'" data-amount="1" data-price="'+json.special_price+'" data-image="'+json.image_url+'" data-id="'+json.id+'" >Add</button></div></div>';
+         //d.innerHTML+='<img class="image2 image-description" style="width: 30%;position: inherit;" src="'+json.image_url+'"><div style="position: inherit; margin-left: 35%;width:45%;" class="item-description-body"><a class="item_name item_name_description" style="font-weight: bold;" target="_blank">'+json.name+'</a><br><div class="category-description" style="margin-left: 5%;margin-bottom:5%;">'+description+'<img class="image-eye" src="./dist/img/eye.png"></div><div class="old price">'+json.price+'</div><div class="current price">'+json.special_price+'</div><br><button class="button buy" data-name="'+json.name+'" data-amount="1" data-price="'+json.special_price+'" data-image="'+json.image_url+'" data-id="'+json.id+'" >Add</button></div></div>';
+         d.innerHTML+='<div class="image-container-description"><img class="image2 image-description"  src="'+json.image_url+'"></div><div style="position: inherit; margin-left: 35%;width:45%;" class="item-description-body"><a class="item_name item_name_description" style="font-weight: bold;" target="_blank">'+json.name+'</a><br><div class="category-description" style="margin-left: 5%;margin-bottom:5%;">'+description+'<img class="image-eye" src="./dist/img/eye.png"></div><div class="old price">'+json.price+'</div><div class="current price">'+json.special_price+'</div><br><button class="button buy" data-name="'+json.name+'" data-amount="1" data-price="'+json.special_price+'" data-image="'+json.image_url+'" data-id="'+json.id+'" >Add</button></div></div>';
 
        }
           else{
-         d.innerHTML+='<img class="image2 image-description" style="width: 30%;position: inherit;" src="'+json.image_url+'"><div style="position: inherit; margin-left: 35%;width:45%;" class="item-description-body"><a class="item_name item_name_description" style="font-weight: bold;" target="_blank">'+json.name+'</a><br><div class="category-description" style="margin-left: 5%;margin-bottom:5%">'+description+'<img class="image-eye" src="./dist/img/eye.png"></div><div class="current price">'+json.price+'</div><br><button class="button buy" data-name="'+json.name+'" data-amount="1" data-price="'+json.price+'" data-image="'+json.image_url+'" data-id="'+json.id+'" >Add</button></div>';
+         //d.innerHTML+='<img class="image2 image-description" style="width: 30%;position: inherit;" src="'+json.image_url+'"><div style="position: inherit; margin-left: 35%;width:45%;" class="item-description-body"><a class="item_name item_name_description" style="font-weight: bold;" target="_blank">'+json.name+'</a><br><div class="category-description" style="margin-left: 5%;margin-bottom:5%">'+description+'<img class="image-eye" src="./dist/img/eye.png"></div><div class="current price">'+json.price+'</div><br><button class="button buy" data-name="'+json.name+'" data-amount="1" data-price="'+json.price+'" data-image="'+json.image_url+'" data-id="'+json.id+'" >Add</button></div>';
            //d.innerHTML+='</div>';
+         d.innerHTML+='<div class="image-container-description"><img class="image2 image-description"  src="'+json.image_url+'"></div><div style="position: inherit; margin-left: 35%;width:45%;" class="item-description-body"><a class="item_name item_name_description" style="font-weight: bold;" target="_blank">'+json.name+'</a><br><div class="category-description" style="margin-left: 5%;margin-bottom:5%">'+description+'<img class="image-eye" src="./dist/img/eye.png"></div><div class="current price">'+json.price+'</div><br><button class="button buy" data-name="'+json.name+'" data-amount="1" data-price="'+json.price+'" data-image="'+json.image_url+'" data-id="'+json.id+'" >Add</button></div>';
         
          }
+
+         changeImageDescriptionWidth();
+
 
           closeButton2= document.getElementById("close-button2");
           closeButton2.addEventListener("click", toggleModal2);
@@ -534,10 +540,7 @@ $(document).on('click','.checkout',function(e){
   },
 
 });
-  
 
-
-      
 
     });
 
