@@ -498,7 +498,7 @@ $(document).on('click','.checkout',function(e){
   success: function(json){
   	console.log(e.target.parentElement.childNodes[0]);
 
- e.target.parentElement.childNodes[0].innerHTML="";
+ e.target.parentElement.childNodes[0]="";
 
 //console.log(description.length);
     if(description.length<=260+3)
